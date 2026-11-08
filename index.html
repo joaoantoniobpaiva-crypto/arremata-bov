@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Arrem@ta Bov</title>
+<meta name="description" content="Arrem@ta Bov: compra e venda de gado comercial com o corretor no centro do negócio. Protótipo com dados de exemplo.">
+<meta name="theme-color" content="#0E4A2B">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Arrem@ta Bov">
+<meta property="og:title" content="Arrem@ta Bov · protótipo">
+<meta property="og:description" content="Lote bom aparece aqui. Arremate.">
+<meta property="og:image" content="img/hero.jpg">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="img/icone-app-final.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/icone-180.png">
+<link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet">
+<link href="app.css" rel="stylesheet">
+</head>
+<body>
+<div class="palco">
+  <aside class="lado">
+    <img src="img/logo-completo.svg" alt="Arrem@ta Bov" class="lado-logo">
+    <h1>Gado bom, negócio fechado <span>dentro do app</span>.</h1>
+    <p>Protótipo do Arrem@ta Bov: compra e venda de lotes de gado comercial em que o corretor continua no centro e fecha o negócio pelo app.</p>
+    <div class="ver-como">
+      <small>Ver o app como</small>
+      <div class="seg" id="papelLado">
+        <button data-papel="corretor">Corretor</button>
+        <button data-papel="produtor">Produtor</button>
+        <button data-papel="comprador">Comprador</button>
+      </div>
+      <button class="recomeca" id="recomeca">Recomeçar do cadastro</button>
+    </div>
+    <div class="qr"><div id="qr"></div><span>Aponte a câmera<br>para abrir no celular</span></div>
+    <p class="nota">Versão 1 · protótipo com dados de exemplo. Fotos geradas por IA; lotes, pessoas e valores são fictícios. Taxas e regras são propostas a validar.</p>
+  </aside>
+  <div class="aparelho">
+    <div id="app"></div>
+    <div class="splash"><img src="img/logo-completo-branco.svg" alt=""><small>Lote bom aparece aqui.</small></div>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="dados.js"></script>
+<script src="app.js"></script>
+<script>
+  try { if (window.QRCode && innerWidth > 820) new QRCode(document.getElementById('qr'), { text: location.href.split('#')[0], width: 84, height: 84, colorDark: '#0E4A2B', colorLight: '#ffffff' }); } catch (e) {}
+</script>
+</body>
+</html>

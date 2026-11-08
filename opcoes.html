@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arrem@ta Bov — 3 opções de início</title>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<style>
+:root{--p:#0E4A2B;--pe:#08321D;--pa:#F7F4EC;--ou:#D99A12;--ink:#13241A;--mut:#56685C;--line:#E3DDCC;--v:#1E7A47}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Figtree,sans-serif;background:#e4e0d3;color:var(--ink);padding:32px 16px}
+h1{text-align:center;font-size:22px;font-weight:800;margin-bottom:6px}.sub{text-align:center;color:var(--mut);margin-bottom:28px}
+.row{display:flex;gap:36px;justify-content:center;flex-wrap:wrap}.col{display:flex;flex-direction:column;align-items:center;gap:12px}
+.col h2{font-size:16px;font-weight:800}.col p{max-width:330px;text-align:center;color:var(--mut);font-size:14px}
+.phone{width:360px;height:740px;border-radius:44px;overflow:hidden;position:relative;background:var(--pa);box-shadow:0 30px 60px -20px rgba(8,50,29,.5),0 0 0 10px #111}
+.scroll{height:100%;overflow-y:auto;scrollbar-width:none}
+.scroll::-webkit-scrollbar{display:none}
+svg.lucide{width:20px;height:20px;flex:none}
+.tab{position:absolute;bottom:0;left:0;right:0;height:74px;display:flex;justify-content:space-around;align-items:center;padding-bottom:10px;font-size:11px;font-weight:600;z-index:5}
+.tab div{display:flex;flex-direction:column;align-items:center;gap:3px}
+.arr{background:var(--ou);color:var(--pe);font-weight:800;border-radius:14px;padding:11px 16px;font-size:14px;display:inline-block}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.chips span{white-space:nowrap;padding:8px 14px;border-radius:99px;font-size:13px;font-weight:600}
+.sec{display:flex;justify-content:space-between;align-items:baseline;margin:22px 0 12px}.sec h4{font-size:17px;font-weight:800}.sec a{font-size:12px;font-weight:700}
+.rail{display:flex;gap:12px;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:0 16px}
+.card{min-width:236px;height:264px;border-radius:22px;position:relative;overflow:hidden;background:#333 center/cover;flex:none}
+.card .inf{position:absolute;inset:auto 0 0 0;padding:14px;background:linear-gradient(0deg,rgba(8,50,29,.96) 20%,transparent);color:#fff}
+.card small{font-size:12px;opacity:.85}.card strong{display:block;font-size:19px;font-weight:800;margin:2px 0}
+.sel{position:absolute;top:10px;left:10px;background:#fff;color:var(--p);font-size:11px;font-weight:800;padding:5px 9px;border-radius:99px;display:flex;gap:4px;align-items:center}
+.sel svg.lucide{width:13px;height:13px}
+/* A — Pasto */
+.a{background:var(--p)}
+.a .top{height:440px;position:relative;background:url(img/hero.jpg) center 60%/cover}
+.a .top:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,50,29,.6),rgba(8,50,29,.05) 38%,rgba(14,74,43,1))}
+.a .hd{position:absolute;z-index:2;top:48px;left:20px;right:20px;display:flex;justify-content:space-between;align-items:center;color:#fff}
+.a .hd img{height:40px}
+.a .ttl{position:absolute;z-index:2;bottom:94px;left:20px;right:20px;color:#fff}.a .ttl h3{font-size:32px;line-height:1.04;font-weight:800;letter-spacing:-.5px}.a .ttl span{color:var(--ou)}
+.a .srch{position:absolute;z-index:3;bottom:22px;left:16px;right:16px;background:#fff;border-radius:18px;padding:8px 8px 8px 16px;display:flex;align-items:center;gap:10px;color:var(--mut);font-size:14px;box-shadow:0 10px 30px rgba(0,0,0,.3)}.a .srch .arr{margin-left:auto;padding:10px 14px}
+.a .body{color:#fff;padding:6px 16px 100px}
+.a .chips span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16)}.a .chips span.on{background:#fff;color:var(--p);border-color:#fff}
+.a .sec a{color:var(--ou)}.a .tab{background:var(--pe);color:rgba(255,255,255,.6)}.a .tab .on{color:var(--ou)}
+.a .atal{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.a .atal div{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:14px;font-weight:700;font-size:14px;display:flex;flex-direction:column;gap:10px}
+.a .atal svg{color:var(--ou)}.a .atal small{font-weight:500;opacity:.7;font-size:12px;margin-top:-6px}
+/* B — Painel do corretor */
+.b .hd{padding:50px 18px 6px;display:flex;justify-content:space-between;align-items:center}.b .hd img{height:34px}
+.b .av{width:40px;height:40px;border-radius:50%;background:var(--p);color:#fff;display:grid;place-items:center;font-weight:800;font-size:14px}
+.b .hi{padding:10px 18px 0}.b .hi small{color:var(--mut);font-size:14px}.b .hi h3{font-size:27px;font-weight:800;line-height:1.1;margin-top:2px}
+.b .num{margin:16px 16px 0;background:var(--p);color:#fff;border-radius:26px;padding:20px 18px 18px;position:relative;overflow:hidden}
+.b .num small{opacity:.78;font-size:13px}.b .num strong{display:block;font-size:36px;font-weight:800;margin:2px 0 14px;letter-spacing:-.5px}
+.b .num .tri{display:flex;gap:8px;position:relative;z-index:1}.b .num .tri div{flex:1;background:rgba(255,255,255,.1);border-radius:14px;padding:10px;font-size:12px}.b .num .tri b{display:block;font-size:21px}
+.b .num:after{content:"@";position:absolute;right:14px;top:6px;font-size:84px;font-weight:800;color:var(--ou);line-height:1}
+.b .pad{padding:0 16px 100px}.b .sec a{color:var(--v)}
+.b .item{display:flex;gap:12px;background:#fff;border-radius:20px;padding:10px;margin-bottom:10px;border:1px solid var(--line);align-items:center}
+.b .item .ph{width:70px;height:70px;border-radius:14px;background:center/cover;flex:none}.b .item strong{display:block;font-size:15px;font-weight:800}.b .item small{color:var(--mut);font-size:13px}
+.b .st{margin-left:auto;font-size:12px;font-weight:800;padding:6px 10px;border-radius:99px;background:#E4F0E7;color:var(--v);white-space:nowrap}.b .st.o{background:var(--ou);color:var(--pe)}
+.b .tab{background:#fff;color:var(--mut);border-top:1px solid var(--line)}.b .tab .on{color:var(--p)}
+/* C — Duas portas */
+.c{background:var(--p)}
+.c .hd{padding:50px 18px 10px;display:flex;justify-content:space-between;align-items:center;color:#fff}.c .hd img{height:34px}
+.c .big{padding:8px 18px 18px;color:#fff}.c .big small{opacity:.75;font-size:14px}.c .big h3{font-size:29px;font-weight:800;line-height:1.06;margin-top:4px}.c .big h3 span{color:var(--ou)}
+.c .portas{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 16px 18px}
+.c .porta{border-radius:22px;padding:14px;height:160px;display:flex;flex-direction:column;justify-content:space-between;font-weight:800;font-size:16px;line-height:1.15;position:relative;overflow:hidden;color:#fff;background:center/cover}
+.c .porta:before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,50,29,.95) 25%,rgba(8,50,29,.15))}.c .porta>*{position:relative}
+.c .porta small{font-weight:500;font-size:12px;opacity:.85;display:block;margin-top:3px}.c .porta svg{color:var(--ou)}
+.c .folha{background:var(--pa);border-radius:28px 28px 0 0;padding:18px 16px 100px;min-height:440px}
+.c .acoes{display:flex;gap:8px;margin-bottom:6px}.c .acoes div{flex:1;background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 6px;font-size:12px;font-weight:700;display:flex;flex-direction:column;gap:6px;align-items:center;color:var(--p)}
+.c .acoes div.go{background:var(--ou);border-color:var(--ou);color:var(--pe)}
+.c .lin{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}.c .lin:last-child{border:0}
+.c .lin .ph{width:54px;height:54px;border-radius:14px;background:center/cover;flex:none}.c .lin strong{font-size:15px;font-weight:800;display:block}.c .lin small{font-size:13px;color:var(--mut)}
+.c .lin .r{margin-left:auto;text-align:right}.c .lin .r b{display:block;font-size:14px;color:var(--v)}.c .lin .r em{font-style:normal;font-size:11px;color:var(--mut)}
+.c .tab{background:var(--pe);color:rgba(255,255,255,.6)}.c .tab .on{color:var(--ou)}
+.ex{position:absolute;top:14px;left:50%;transform:translateX(-50%);z-index:9;font-size:10px;font-weight:700;letter-spacing:.4px;background:rgba(0,0,0,.35);color:#fff;padding:3px 8px;border-radius:99px}
+</style></head><body>
+<h1>Arrem@ta Bov: 3 opções de tela inicial</h1>
+<p class="sub">Vista do corretor, com lotes de exemplo. Escolha uma ou misture.</p>
+<div class="row">
+
+<!-- A -->
+<div class="col"><div class="phone a"><span class="ex">EXEMPLO</span><div class="scroll">
+ <div class="top"><div class="hd"><img src="img/logo-completo-branco.svg" alt="Arrem@ta Bov"><i data-lucide="bell"></i></div>
+ <div class="ttl"><h3>Lote bom<br>aparece aqui.<br><span>Arremate.</span></h3></div>
+ <div class="srch"><i data-lucide="search"></i>Boi gordo, 30+ cabeças…<span class="arr">Buscar</span></div></div>
+ <div class="body"><div class="chips"><span class="on">Perto de mim</span><span>Boi gordo</span><span>Bezerro</span><span>Vaca de cria</span><span>Novilha</span></div>
+ <div class="sec"><h4>Lotes novos na região</h4><a>Ver todos</a></div>
+ <div class="rail"><div class="card" style="background-image:url(img/lote2.jpg)"><div class="sel"><i data-lucide="badge-check"></i>Verificado</div><div class="inf"><small>Rio Verde-GO · 320 cab.</small><strong>Boi gordo nelore</strong><small>R$ 312/@ · 19 @ média</small></div></div>
+ <div class="card" style="background-image:url(img/lote1.jpg)"><div class="sel"><i data-lucide="badge-check"></i>Verificado</div><div class="inf"><small>Jataí-GO · 140 cab.</small><strong>Garrote cruzado</strong><small>R$ 3.480 por cabeça</small></div></div></div>
+ <div class="sec"><h4>Seu dia</h4></div>
+ <div class="atal"><div><i data-lucide="layers"></i>Meus lotes<small>7 na carteira</small></div><div><i data-lucide="handshake"></i>Propostas<small>3 esperando</small></div><div><i data-lucide="map-pin"></i>Visitas<small>2 esta semana</small></div><div><i data-lucide="truck"></i>Frete<small>1 cotação nova</small></div></div></div>
+</div><div class="tab"><div class="on"><i data-lucide="home"></i>Início</div><div><i data-lucide="search"></i>Lotes</div><div><i data-lucide="message-circle"></i>Conversas</div><div><i data-lucide="user"></i>Eu</div></div>
+</div><h2>A · Pasto</h2><p>Foto grande do rebanho e busca logo de cara. Mais emocional; funciona bem para produtor e comprador.</p></div>
+
+<!-- B -->
+<div class="col"><div class="phone b"><span class="ex" style="background:rgba(14,74,43,.12);color:var(--p)">EXEMPLO</span><div class="scroll">
+ <div class="hd"><img src="img/logo-completo.svg" alt="Arrem@ta Bov"><div class="av">CM</div></div>
+ <div class="hi"><small>Bom dia,</small><h3>Carlos Mendes</h3></div>
+ <div class="num"><small>Comissão prevista em novembro</small><strong>R$ 18.400</strong><div class="tri"><div><b>7</b>lotes meus</div><div><b>3</b>propostas</div><div><b>2</b>visitas</div></div></div>
+ <div class="pad"><div class="sec"><h4>Hoje</h4><a>Agenda</a></div>
+ <div class="item"><div class="ph" style="background-image:url(img/lote2.jpg)"></div><div><strong>Visita · boi gordo</strong><small>Faz. Boa Vista · 14h</small></div><span class="st o">Check-in</span></div>
+ <div class="item"><div class="ph" style="background-image:url(img/lote1.jpg)"></div><div><strong>Proposta nova</strong><small>Garrote · R$ 3.420/cab.</small></div><span class="st">Responder</span></div>
+ <div class="sec"><h4>Lotes abertos na região</h4><a>Ver 12</a></div>
+ <div class="item"><div class="ph" style="background-image:url(img/lote3.jpg)"></div><div><strong>Vaca de cria · 90 cab.</strong><small>Mineiros-GO · sem corretor</small></div><span class="st">Atender</span></div></div>
+</div><div class="tab"><div class="on"><i data-lucide="home"></i>Início</div><div><i data-lucide="layers"></i>Lotes</div><div><i data-lucide="message-circle"></i>Conversas</div><div><i data-lucide="user"></i>Eu</div></div>
+</div><h2>B · Painel do corretor</h2><p>Começa pelo dinheiro e pelo dia dele. Mais prático; fala direto com o cliente inicial, que é o corretor.</p></div>
+
+<!-- C -->
+<div class="col"><div class="phone c"><span class="ex">EXEMPLO</span><div class="scroll">
+ <div class="hd"><img src="img/logo-completo-branco.svg" alt="Arrem@ta Bov"><i data-lucide="bell"></i></div>
+ <div class="big"><small>Bom dia, Carlos</small><h3>Sua carteira é sua.<br>O <span>volume</span> é nosso.</h3></div>
+ <div class="portas"><div class="porta" style="background-image:url(img/corretor.jpg)"><i data-lucide="lock"></i><div>Minha carteira<small>7 lotes protegidos</small></div></div>
+ <div class="porta" style="background-image:url(img/lote3.jpg)"><i data-lucide="door-open"></i><div>Lotes abertos<small>12 na sua região</small></div></div></div>
+ <div class="folha"><div class="acoes"><div class="go"><i data-lucide="plus"></i>Novo lote</div><div><i data-lucide="search"></i>Buscar</div><div><i data-lucide="truck"></i>Frete</div></div>
+ <div class="sec"><h4>Negócios em andamento</h4></div>
+ <div class="lin"><div class="ph" style="background-image:url(img/lote2.jpg)"></div><div><strong>Boi gordo · 320</strong><small>Visita hoje, 14h</small></div><div class="r"><b>R$ 6.200</b><em>sua comissão</em></div></div>
+ <div class="lin"><div class="ph" style="background-image:url(img/lote1.jpg)"></div><div><strong>Garrote · 140</strong><small>Contrato para assinar</small></div><div class="r"><b>R$ 4.870</b><em>sua comissão</em></div></div>
+ <div class="lin"><div class="ph" style="background-image:url(img/caminhao.jpg)"></div><div><strong>Vaca de cria · 90</strong><small>Gado a caminho</small></div><div class="r"><b>R$ 2.300</b><em>sua comissão</em></div></div></div>
+</div><div class="tab"><div class="on"><i data-lucide="home"></i>Início</div><div><i data-lucide="layers"></i>Lotes</div><div><i data-lucide="message-circle"></i>Conversas</div><div><i data-lucide="user"></i>Eu</div></div>
+</div><h2>C · Duas portas</h2><p>Mostra a ideia do negócio na entrada: a carteira do corretor protegida e os lotes abertos para ele atender.</p></div>
+
+</div><script>lucide.createIcons()</script></body></html>
